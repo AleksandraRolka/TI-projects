@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8" >
+	<title>IT - Project 02</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style_project02.css">
+	<link rel="icon" href="favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script src="rest.js"></script>
+</head>
+
+<body>
+
+	<div class="menu" id="menu">
+	</div>
+	
+	<div class="container">
+	
+		<div class="hello" id="hello">
+			<p  class="p1">Dzień dobry!</p>
+			<p  class="p2">Witam Cię w prostej aplikacja webowej przetwarzającej dane ankietowe w trybie on-line oraz off-line.</p>
+		</div>
+		
+		<div class="registration"  id="registration" >
+			<fieldset>
+				<legend id="leg"><b>Rejestracja</b></legend>
+				<form method="post">
+					<label for="login">Login:</label>
+					<input type="text" id="login" name="login"><br><br>
+					<label for="pass">Hasło</label>
+					<input type="password" id="pass" name="pass"><br><br><br>
+					<input type="button" id="submitButton" class="submitButton" value="Zarejestuj się" onclick="reg_user(this.form)"/>
+				</form>
+			</fieldset>
+		</div>
+		
+		<div class="logIn" id="logIn">
+			<fieldset>
+				<legend id="leg"><b>Logowanie</b></legend>
+				<form method="post">
+					<label for="login">Login:</label>
+					<input type="text" id="login" name="login"><br><br>
+					<label for="pass">Hasło</label>
+					<input type="password" id="pass" name="pass"><br><br><br>
+					<input type="button" id="submitButton" class="submitButton" value="Zaloguj się" onclick="log_user(this.form)"/>
+				</form>
+			</fieldset>
+		</div>
+		
+		<div class="survey" id="survey">
+			<fieldset>
+				<legend id="leg"><b>Ankieta</b></legend>
+				<form method="post" class="surveyForm">
+					<p>W jakim przedziale wiekowym jesteś?</p>
+						<input type="radio" id="ageChoice1" name="age" value="range1">
+						<label for="ageChoice1">18-25</label><br>
+						<input type="radio" id="ageChoice2" name="age" value="range2">
+						<label for="ageChoice2">26-39</label><br>
+						<input type="radio" id="ageChoice3" name="age" value="range3">
+						<label for="ageChoice3">40-59</label><br>
+						<input type="radio" id="ageChoice4" name="age" value="range4">
+						<label for="ageChoice4">60-100</label><br>
+						
+					<p>W jakiej porze dnia jesteś najbardziej produktywny/a?</p>
+						<input type="radio" id="day" name="time" value="day">
+						<label for="day">dzień</label><br>
+						<input type="radio" id="night" name="time" value="night">
+						<label for="night">noc</label><br>
+					
+					<input type="button" id="sendButton" class="sendButton" value="Wyślij" onclick="survey_data(this.form)" />
+				</form>
+			</fieldset>
+		</div>
+		
+		<div class="results" id="results">
+			<fieldset>
+				<legend id="leg"><b>Statystyka</b></legend>
+					<input type="button" id="showHistButton" class="showHistButton" value="Pokaż wyniki / Odśwież" onclick="showResults()" />
+					<div class="canvasHist" id="canvasHist" style="height: 450px; width: 100%; margin-top: 30px;"></div>
+			</fieldset>
+		</div>
+		
+	</div>
+	
+	<footer><b>WFIiS - Internet Technology - </b><u>made by <a href="mailto:aleksandra.rolka@fis.agh.edu.pl">Aleksandra Rolka</a></u></footer>
+	
+</body>
+</html>

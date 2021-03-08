@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!-- Plik zawiera informacje o zrealizowanych projektach.
+        Nalezy go umiescic w glownym katalogu uzytkownika:
+              /home/studxx/user/TIproj.xml
+        W ramach elementu <projekt> z atrybutem no=0 umieszczamy link do pliku
+        zawierajacego linkami do zrealizowanych zadan, projektow realizowanych
+        na zajeciach ( 7 i 14 zajęcia ) oraz projektow realizowanych
+        poza pracownia.   
+        W kolejnych elementach <projekt> nalezy umiescic
+        sciezki dostepu do plikow startowych projektow domowych z poziomu
+        katalogu public_html uzytkownika. 
+        W komentarzach przedstawiono pelna sciezke, 
+        ponizej link do projektu.        
+-->
+<projekty>
+   <projekt no="0" >
+     <!-- przykladowy katalog z plikiem:
+          /home/studxx/user/public_html/strony.html -->
+     strony.html
+   </projekt>
+   <projekt no="1" >
+     <!-- przykladowy katalog z plikiem:
+          /home/studxx/user/public_html/projekt1/index.html -->
+     projekt1/index.html
+   </projekt>
+   <projekt no="2" >
+     <!-- przykladowy katalog z plikiem:
+          /home/studxx/user/public_html/projekt2/index.html -->
+     projekt2/index.html
+   </projekt>
+</projekty>

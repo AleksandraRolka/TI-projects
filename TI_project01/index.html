@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<!-- Otwierac w przegladarce Firefox (nie w Chrome) by poprawnie wyswietlalo ulamki proste -->
+
+<html lang="pl">
+<head>
+	<meta charset="UTF-8" >
+	<title>IT - Wahadło matematyczne</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="style_project01.css">
+</head>
+
+<body>
+	<header id="header">
+		<h1 id="h1">
+			<a href="../../index.html"><img class="hp_img" src="homepage_icon.png" alt="Homepage icon"></a>
+			<span id="h1t">Wahadło matematyczne</span>
+		</h1>
+	</header>
+	<div class="maincontent">
+	<div class="clock">
+		<p class="clockL" id="clock"> </p>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="#description">Teoria</a></li>
+			<li><a href="#pendulum">Symulacja + kalkulator</a></li>
+			<li><a href="#videoDiv">Wideo</a></li>
+		</ul>
+	</nav>
+		<article class="description" id="description">
+			<p><b>Wahadło proste (matematyczne)</b> - jest to wyidealizowane ciało o masie punktowej, zawieszone na cienkiej, nieważkiej, nierozciągliwej nici. Kiedy ciało wytrącimy z równowagi, to zaczyna się ono wahać w płaszczyźnie poziomej pod wpływem siły ciężkości. Jest to  ruch okresowy.</p>
+			<p>Rysunek 1. przedstawia wahadło o długości <b><i>l</i></b> i masie <b><i>m</i></b>, odchylone o kąt <b><i>θ</i></b> od pionu.</p>
+			<figure>
+				<img src="schemat1.png" alt="Rys.1. Wahadło matematyczne">  
+				<figcaption>Rys.1. <i>Wahadło matematyczne [<a href="https://epodreczniki.open.agh.edu.pl" target="_blank">1</a>]</i></figcaption>
+			</figure><br>
+			
+			<p>Na masę  <b><i>m</i></b> działa siła grawitacji  <b><i>mg</i></b> i naprężenia nici  <b><i>N</i></b>. Siłę <b><i>mg</i></b> rozkładamy na składową radialną (normalną) i styczną. Składowa normalna jest równoważona przez naciąg nici <b><i>N</i></b>. Natomiast składowa styczna przywraca równowagę układu i sprowadza masę <b><i>m</i></b> do położenia równowagi.</p>
+			<p>Składowa styczna siły grawitacji ma wartość:</p> 
+			
+			<div class="formula"><math><mi>F</mi><mo> = </mo><mo>-</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>&#x3B8;</mi></math></div>
+			
+			<p>Zwróć uwagę, że to nie jest, w myśl podanej definicji, siła harmoniczna, bo jest proporcjonalna do sinusa wychylenia (<i>sinθ</i>), a nie do wychylenia <i>θ</i>. Jeżeli jednak kąt <i>θ</i> jest mały (np. 5<math><mo>&#xB0;</mo></math>) to <i>sinθ</i> jest bardzo bliski <i>θ</i> (różnica rzędu 0.1%). Przemieszczenie <i>x</i> wzdłuż łuku wynosi (z miary łukowej kąta) <i>x = lθ</i>. <br>Przyjmując zatem, że <i>sinθ ≈ θ</i> otrzymujemy:</p>	
+			
+			<div class="formula"><math><mi>F</mi><mo> = </mo><mo>&#x2212;</mo><mi>m</mi><mi>g</mi><mi>&#x3B8;</mi><mo> = </mo><mo>&#x2212;</mo><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mi>l</mi></mfrac><mi>x</mi></math></div>
+
+			
+			<p>Tak więc, dla małych wychyleń siła jest proporcjonalna do przemieszczenia i masz do czynienia z ruchem harmonicznym. Powyższe równanie jest analogiczne do równania siły sprężystości (harmonicznej) przy czym <math><mi>k</mi><mo>=</mo><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mi>l</mi></mfrac></math>. Można więc skorzystać z zależności dla okresu <i>T</i> z ruchu harmonicznego i obliczyć okres wahań <b><i>T </i></b>  wahadła z następującego wzoru:</p>	
+
+			<div class="formula"><math><mi>T</mi><mo>=</mo><mn>2</mn><mi>&#x3C0;</mi><msqrt><mfrac><mi>m</mi><mi>k</mi></mfrac></msqrt><mo>=</mo><mn>2</mn><mi>&#x3C0;</mi><msqrt><mfrac><mi>l</mi><mi>g</mi></mfrac></msqrt></math></div>
+
+
+			<p>Okres wahadła prostego <u>nie zależy od amplitudy i od masy wahadła</u>.</p>
+			<p>Zauważ, że pomiar okresu <i>T</i> może być prostą metodą wyznaczenia przyspieszenia <i>g</i>.</p>
+			
+			<br><p>Poniżej znajdziesz <b>symulację ruchu wahadła prostego.</b> Naciśnij przycisk <i>Start / Stop</i>  aby rozpocząć / zatrzymać animację.</p>
+			<p>Wypróbuj również <b>kalkulator</b> - wylicz okres wahań wahadła, podając długość ramienia wahadła oraz przyspieszenie grawitacyjne.</p>
+		</article>
+	
+		<div class="inlinesDiv">	
+			<div class="panelAll">	
+			
+				<div class="radioChoice" >
+					<form>
+						<input type="radio" id="withoutResistance" name="option" class="withoutResistance" value="w próżni" checked>
+						<label for="withoutResistance">w próżni</label>
+						<input type="radio" id="withResistance" name="option" class="withResistance" value="z siłą oporu">
+						<label for="withResistance">z siłą oporu</label>
+					</form>
+				</div>
+				<div class="panel">
+					<input type="button" id="startButton" class="startButton" name="startButton" value="Start" onclick="start()" title="Rozpocznij symulacje"/>
+					<input type="button" id="stopButton" class="buttons" name="stopButton"  value="Stop"  onclick="stop()" title="Zatrzymaj symulacje"/>
+				</div>
+			</div>
+				
+			<div class="pendulum" id="pendulum">
+				<canvas id="canvas1">
+					Przykro mi, twoja przeglądarka nie wspiera elementów canvas, odwiedź stronę w innej przeglądarce
+				</canvas>
+			</div>
+			<div class="counter" id="counter">
+				<form name="form1">
+					<fieldset>
+						<legend><b>Kalkulator: </b> okresu wahań wahadła </legend>
+						<div class="col1">
+							<label for="len" class="cell1"><i>l </i>:</label><br/>
+							<label for="grav" class="cell1"><i>g </i>:</label><br/>
+						</div>
+						<div class="col2">
+							<input type="text" size="5" id="len" name="len" class="cell2" title="Długość ramienia wahadła [m]"/><br/>
+							<input type="text" size="5" id="grav" name="grav" class="cell2" title="Przyspieszenie grawitacyjne [m/s^2]"  value="9.81"/><br/>
+						</div>
+						<div class="col3">
+							<input type="button" id="countButton" class="countButton" name="countButton" value="Pokaż wynik" onclick="count()"/>
+							<p id="result"> </p>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<nav class="nav2">
+			<ul>
+				<li><a href="#description">Powróć do teorii</a></li>
+			</ul>
+		</nav>	
+		<div id="videoDiv" class="description" style="margin-top:700px; padding-bottom:10px;">
+			<p>Powyższa teoria i podstawowa wersja uproszczonej symulacji ruchu wahadła prostego zakłada brak sił wynikających z ośrodka w jakim się znajduje wahadło - założono, że ośrodkiem jest próżnia. Dlatego kąt maksymalnego wychylenia nie zmnienia się z żadnym okresem. Przy wybraniu opcji z występowaniem siły oporu (tj .np. opór powietrza) widoczna jest zmiana maksymalnego wychylenia, kąt cały czas się zmniejsza, aż wahadło zatrzymuje się.
+			<br>Aby zobaczyć jak zachowuje się wahadło matematyczne w różnych ośrodkach ( próżnia, woda, gliceryna, powietrze ) oglądnij poniższe wideo:</p>
+			<div class="videoR">
+				<iframe width="785" height="440" style="margin-top: 60px;" src ="https://www.youtube.com/embed/ih7cWthn4tI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				 <!-- <video width="785" height="440" controls> -->
+					<!-- <source src="video.mp4" type="video/mp4"> -->
+					<!-- Przykro mi, twoja przeglądarka nie wspiera znacznika video. -->
+				<!-- </video>  -->
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<footer>Made by <a href="mailto:aleksandra.rolka@fis.agh.edu.pl"><u>Aleksandra Rolka</u></a></footer>
+	
+	<script src="script.js"></script>
+</body>
+</html>

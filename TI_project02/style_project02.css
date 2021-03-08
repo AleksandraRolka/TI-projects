@@ -1,0 +1,148 @@
+body 
+{
+	font-family: Montserrat, Arial;
+	color: #336699;
+	background: linear-gradient(to right, #a1d9b4, #32988a, #000e3c);
+	margin:0;
+}
+.menu
+{
+	margin-bottom: 100px;
+}
+ul 
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #000e3c;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-shadow:  0 0 20px #ffffff;
+	text-align:center;
+}
+li 
+{
+	display:inline;
+}
+li a 
+{
+	display:inline-block;
+	color: #ffffff;
+	text-align: center;
+	padding: 25px 35px;
+	font-weight : bold;
+	font-size: 20px;
+	border: solid 2px #000e3c;
+}
+li a:hover:not(.active) 
+{
+	background-color: #a1d9b4;
+	text-shadow: 0px 0px 20px #ffffff;
+	border: solid 2px #ffffff;
+	cursor: pointer;
+}
+.active 
+{
+	background-color: #a1d9b4;
+	border: solid 2px #ffffff;
+}
+.container
+{
+	position: relative;
+	font-size: 22px;
+	color: #ffffff;
+	padding-top: 100px;
+	padding-bottom: 100px;
+} 
+fieldset
+{
+	padding: 40px;
+}
+.registration, .logIn, .results, .local_results, .hello, .survey
+{
+	margin-left: 25%;
+	margin-right: 25%;
+	text-align: center;
+	display: none;
+}
+.hello
+{
+	font-size: 55px;
+	padding-left: 50px;
+	padding-right: 50px;
+	display: block;
+}
+.p1
+{
+	font-weight: bold;
+	margin-bottom: 120px;
+}
+.p2
+{
+	font-size: 25px;
+}
+label
+{
+	font-weight: bold;
+}
+.survey label
+{
+	font-weight: normal;
+}
+.submitButton, .sendButton, .showHistButton, .showHistLocalButton
+{
+	font-family: Montserrat, Arial;
+	background-color: #a1d9b4;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	padding: 6px 20px;
+	border-radius: 4px;
+}
+.sendButton
+{
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+.submitButton:hover, .sendButton:hover, .showHistButton:hover, .showHistLocalButton:hover
+{
+	text-shadow: 1px 1px 8px #ffffff;
+	cursor: pointer;
+}
+.sendButton:disabled
+{
+	background-color: #39505c;
+}
+.sendButton:disabled:hover
+{
+	text-shadow: none;
+	cursor: default;
+}
+footer 
+{
+	position: fixed; 
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	background: linear-gradient(to right, #a1d9b4, #32988a, #000e3c);
+	color: #ffffff;
+	box-shadow:  0 0 10px #ffffff;
+}
+A:link, A:visited, A:active
+{
+	text-decoration: none; 
+	color: #ffffff;
+}
+A:hover, .mail:hover
+{
+	color: #ffffff;
+	text-shadow: 0px 0px 30px #ffffff;
+	cursor: pointer;
+}
